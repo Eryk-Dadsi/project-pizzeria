@@ -392,7 +392,7 @@
         event.preventDefault();
         thisCart.sendOrder();
 
-      })
+      });
 
     }
 
@@ -422,7 +422,7 @@
 
       thisCart.totalPrice = 0;
 
-      if (thisCart.products != []) {
+      if (thisCart.products.length) {
         thisCart.totalPrice = thisCart.subtotalPrice + thisCart.deliveryFee;
       }
 
@@ -455,17 +455,35 @@
       const thisCart = this;
       const url = settings.db.url + '/' + settings.db.order;
 
-      thisCart.payload = {};
+      const payload = {};
 
-      thisCart.payload.address = thisCart.dom.address.value;
-      thisCart.payload.phone = thisCart.dom.phone.value;
-      thisCart.payload.totalPrice = thisCart.totalPrice;
-      thisCart.payload.subtotalPrice = thisCart.subtotalPrice;
-      thisCart.payload.totalNumber = thisCart.totalNumber;
-      thisCart.payload.deliveryFee = thisCart.deliveryFee;
-      thisCart.payload.products = [];
+      payload.address = thisCart.dom.address.value;
+      payload.phone = thisCart.dom.phone.value;
+      payload.totalPrice = thisCart.totalPrice;
+      payload.subtotalPrice = thisCart.subtotalPrice;
+      payload.totalNumber = thisCart.totalNumber;
+      payload.deliveryFee = thisCart.deliveryFee;
+      payload.products = [];
 
-      console.log(thisCart.payload);
+      for (let prod of thisCart.products) {
+        payload.products.push(prod.getData());
+      }
+
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      };
+
+      fetch(url, options)
+        .then(function (response) {
+          return response.json();
+        }).then(function (parsedResponse) {
+          console.log('parsedResponse', parsedResponse);
+        });
+      // console.log(thisCart.payload);
 
     }
   }
@@ -539,7 +557,17 @@
     }
 
     getData() {
+      const thisCartProduct = this;
+      const productSummary = {};
 
+      productSummary.id = thisCartProduct.id;
+      productSummary.amount = thisCartProduct.amount;
+      productSummary.price = thisCartProduct.price;
+      productSummary.priceSingle = thisCartProduct.priceSingle;
+      productSummary.name = thisCartProduct.name;
+      productSummary.params = thisCartProduct.params;
+
+      return productSummary;
     }
 
   }
