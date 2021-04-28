@@ -136,6 +136,7 @@ class cart {
       .then(function (response) {
         return response.json();
       }).then(function (parsedResponse) {
+
         console.log('parsedResponse', parsedResponse);
       });
     // console.log(thisCart.payload);
