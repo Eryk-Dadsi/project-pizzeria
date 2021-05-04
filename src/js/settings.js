@@ -63,7 +63,12 @@ export const select = {
   booking: {
     peopleAmount: '.people-amount',
     hoursAmount: '.hours-amount',
-    tables: '.floor-plan .table',
+    tables: '.table',
+    floorPlan: '.floor-plan',
+    phone: '[name="phone"]',
+    address: '[name="address"]',
+    form: '.booking-form',
+
   },
   nav: {
     links: '.main-nav a',
@@ -79,8 +84,10 @@ export const classNames = {
     wrapperActive: 'active',
   },
   booking: {
+    table: 'table',
     loading: 'loading',
     tableBooked: 'booked',
+    tablePicked: 'picked',
   },
   nav: {
     active: 'active',

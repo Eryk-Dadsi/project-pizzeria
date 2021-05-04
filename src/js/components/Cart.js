@@ -139,7 +139,6 @@ class cart {
 
         console.log('parsedResponse', parsedResponse);
       });
-    // console.log(thisCart.payload);
 
   }
 }
