@@ -24,6 +24,7 @@
           <h2 class="logo__subtitle">the best homemade Italian food</h2>
         </div>
         <div class="main-nav">
+          <a href="#home">Home</a>
           <a href="#order">Order</a>
           <a href="#booking">Booking</a>
         </div>
@@ -65,6 +66,9 @@
   </header>
 
   <div id="pages">
+    <section id="home">
+      <div class="home-wrapper container"></div>
+    </section>
     <section id="order">
       <div id="product-list" class="product-list container"></div>
     </section>
@@ -72,6 +76,44 @@
       <div class="booking-wrapper container"></div>
     </section>
   </div>
+  <script id="template-home-page" type="text/x-handlebars-template">
+    <div class="home-page">
+      <header class="home-header inside-container">
+        <a href="#" class="order link">
+          <h2>ORDER ONLINE</h2>
+          <img src="images/assets/pizza-1.jpg">
+        </a>
+        <a href="#" class="booking link">
+          <h2>BOOK A TABLE</h2>
+          <img src="images/assets/pizza-2.jpg">
+        </a>
+        <a href="#" class="opening-hours">
+          <h2>OPENING HOURS:</h2>
+          <P>TUE-SUN, 12PM-12AM</P>
+          <img src="images/assets/pizza-3.jpg">
+        </a>
+      </header>
+      <div class="inside-container">
+        <div class="slide-img">
+          <img src="images/assets/pizza-3.jpg">
+        </div>
+
+        <div class="slide-descrtiption">
+          <h2>AMAZING SERVICE!</h2>
+          <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam egestas viverra tortor, eu ullamcorper dui imperdiet nec. Nunc sed dolor at elit lobortis sodales.</P>
+        </div>
+      </div>
+      <div class="inside-container">
+        <div class="s2-img"><img src="images/assets/pizza-3.jpg"></div>
+        <div class="s2-img"><img src="images/assets/pizza-3.jpg"></div>
+        <div class="s2-img"><img src="images/assets/pizza-3.jpg"></div>
+        <div class="s2-img"><img src="images/assets/pizza-3.jpg"></div>
+        <div class="s2-img"><img src="images/assets/pizza-3.jpg"></div>
+        <div class="s2-img"><img src="images/assets/pizza-3.jpg"></div>
+        
+      </div>
+    </div>
+  </script>
 
   <script id="template-booking-widget" type="text/x-handlebars-template">
     <div class="booking-widget">

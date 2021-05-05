@@ -199,13 +199,13 @@ class Booking {
     });
 
     thisBooking.dom.floorPlan.addEventListener('click', function (event) {
-      thisBooking.initTables(event)
+      thisBooking.initTables(event);
     });
 
     thisBooking.dom.form.addEventListener('submit', function (event) {
       event.preventDefault();
       thisBooking.sendBooking();
-    })
+    });
 
     thisBooking.dom.form.addEventListener('click', function (event) {
 
@@ -256,14 +256,14 @@ class Booking {
           }
 
         } else if (tableId != targetTableId) {
-          table.classList.remove(classNames.booking.tablePicked)
+          table.classList.remove(classNames.booking.tablePicked);
         }
 
       }
 
     } else if (tableDOM.classList.contains(classNames.booking.table)
       && tableDOM.classList.contains(classNames.booking.tableBooked)) {
-      alert("Stolik jest niedostępny");
+      alert('Stolik jest niedostępny');
     }
 
 
@@ -299,7 +299,7 @@ class Booking {
       }).then(function (parsedResponse) {
 
         console.log('parsedResponse', parsedResponse);
-      });
+      }).then(thisBooking.makeBooked(reservation.date, reservation.hour, reservation.duration, reservation.table));
 
 
   }
