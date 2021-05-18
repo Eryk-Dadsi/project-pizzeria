@@ -13,6 +13,25 @@ const app = {
 
     thisApp.home = new Home(thisApp.homeDom);
 
+    thisApp.bookingButton = document.querySelector('.booking-btn');
+    thisApp.orderButton = document.querySelector('.order-btn');
+
+    thisApp.bookingButton.addEventListener('click', function (event) {
+      const clickedElement = this;
+      event.preventDefault();
+      const id = clickedElement.getAttribute('href').replace('#', '');
+      thisApp.activatePage(id);
+      window.location.hash = '#/' + id;
+    });
+
+    thisApp.orderButton.addEventListener('click', function (event) {
+      const clickedElement = this;
+      event.preventDefault();
+      const id = clickedElement.getAttribute('href').replace('#', '');
+      thisApp.activatePage(id);
+      window.location.hash = '#/' + id;
+    });
+
   },
 
   initBooking: function () {
@@ -56,7 +75,6 @@ const app = {
         window.location.hash = '#/' + id;
       });
     }
-
 
   },
 
