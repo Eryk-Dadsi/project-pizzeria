@@ -1,5 +1,6 @@
 import { templates } from '../settings.js';
 import utils from '../utils.js';
+// import Flickity from '../flickity'
 
 class Home {
   constructor(element) {
@@ -28,7 +29,7 @@ class Home {
 
   initPlugin() {
     const thisHome = this;
-
+    // eslint-disable-next-line
     new Flickity(thisHome.dom.carousel, {
       // options
       autoPlay: true,

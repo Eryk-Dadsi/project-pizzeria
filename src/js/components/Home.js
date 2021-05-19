@@ -1,12 +1,13 @@
 import { templates } from '../settings.js';
 import utils from '../utils.js';
 
+
 class Home {
   constructor(element) {
     const thisHome = this;
 
     thisHome.render(element);
-    thisHome.initPlugin();
+    // thisHome.initPlugin();
 
   }
 
@@ -26,20 +27,20 @@ class Home {
     thisHome.dom.carousel = thisHome.dom.wrapper.querySelector('.main-carousel');
   }
 
-  initPlugin() {
-    const thisHome = this;
+  //   initPlugin() {
+  //     const thisHome = this;
 
-    new Flickity(thisHome.dom.carousel, {
-      // options
-      autoPlay: true,
-      wrapAround: true,
-      prevNextButtons: false,
-      pageDots: true,
-      cellAlign: 'left',
+  //     new Flickity(thisHome.dom.carousel, {
+  //       // options
+  //       autoPlay: true,
+  //       wrapAround: true,
+  //       prevNextButtons: false,
+  //       pageDots: true,
+  //       cellAlign: 'left',
 
 
-    });
-  }
+  //     });
+  // }
 }
 
 
