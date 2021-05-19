@@ -26,8 +26,7 @@
   align-items: center;
   position: relative;
   display: flex;
-  justify-content: center; 
-  transition: all 1s;
+  justify-content: center;
 }
 
 .home-header .opening-hours {
@@ -55,7 +54,7 @@
 }  
 
 .home-header a:hover h2 {
-  top:10%; 
+  top: 10%; 
 }
 
 /* CAROUSEL */
@@ -75,7 +74,7 @@
 
 
 .carousel-cell img {
-  width:($base-size * 16);
+  width: ($base-size * 16);
   height: ($base-size * 16);
   margin-right: ($base-size * 3);
   object-fit: cover;
@@ -116,8 +115,8 @@
 }
 
 .gallery a {
- color: $color-main;
- margin: ($base-size / 2);
+  color: $color-main;
+  margin: ($base-size / 2);
 }
 
 .gallery i {
