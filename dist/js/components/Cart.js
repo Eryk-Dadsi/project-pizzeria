@@ -60,8 +60,6 @@ class cart {
     thisCart.dom.productList.appendChild(generatedDOM);
     thisCart.products.push(new cartProduct(menuProduct, generatedDOM));
     thisCart.update();
-    // console.log('thisCar.products', thisCart.products)
-    // console.log('adding product', menuProduct);
   }
 
   update() {
@@ -87,10 +85,6 @@ class cart {
     thisCart.dom.totalPriceHeader.innerHTML = thisCart.totalPrice;
     thisCart.dom.totalNumber.innerHTML = thisCart.totalNumber;
 
-    // console.log(thisCart.deliveryFee);
-    // console.log(thisCart.totalNumber);
-    // console.log(thisCart.subtotalPrice);
-    // console.log(thisCart.totalPrice);
   }
 
   remove(element) {

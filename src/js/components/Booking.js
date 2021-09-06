@@ -64,9 +64,6 @@ class Booking {
         ]);
       })
       .then(function ([bookings, eventsCurrent, eventsRepeat]) {
-        // console.log(bookings);
-        // console.log(eventsCurrent);
-        // console.log(eventsRepeat);
         thisBooking.parseData(bookings, eventsCurrent, eventsRepeat);
       });
   }
@@ -95,7 +92,6 @@ class Booking {
         }
       }
     }
-    // console.log(thisBooking.booked);
 
     thisBooking.updateDOM();
   }

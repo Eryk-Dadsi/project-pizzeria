@@ -16,8 +16,6 @@ class Product {
     thisProduct.initAmountWidget();
     thisProduct.processOrder();
 
-    // console.log('new Product:', thisProduct);
-    // console.log(thisProduct.id);
   }
 
   renderInMenu() {
@@ -116,13 +114,11 @@ class Product {
 
         if (formData[paramId] && formData[paramId].includes(optionId)) {
 
-          // imageSelector.classList.add(classNames.menuProduct.imageVisible);
           if (option.default != true) {
             price += option.price;
           }
         }
         else {
-          // imageSelector.classList.remove(classNames.menuProduct.imageVisible);
           if (option.default == true) {
             price -= option.price;
           }
@@ -146,7 +142,6 @@ class Product {
   addToCart() {
     const thisProduct = this;
 
-    // app.cart.add(thisProduct.prepareCartProduct());
 
     const event = new CustomEvent('add-to-cart', {
       bubbles: true,

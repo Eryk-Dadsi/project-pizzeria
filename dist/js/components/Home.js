@@ -7,7 +7,6 @@ class Home {
     const thisHome = this;
 
     thisHome.render(element);
-    // thisHome.initPlugin();
 
   }
 
@@ -26,21 +25,6 @@ class Home {
 
     thisHome.dom.carousel = thisHome.dom.wrapper.querySelector('.main-carousel');
   }
-
-  //   initPlugin() {
-  //     const thisHome = this;
-
-  //     new Flickity(thisHome.dom.carousel, {
-  //       // options
-  //       autoPlay: true,
-  //       wrapAround: true,
-  //       prevNextButtons: false,
-  //       pageDots: true,
-  //       cellAlign: 'left',
-
-
-  //     });
-  // }
 }
 
 
